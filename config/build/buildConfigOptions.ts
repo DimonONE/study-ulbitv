@@ -6,24 +6,24 @@ import { buildResolvers } from "./buildResolvers";
 import { BuildOptions } from "./types/config";
 
 export function buildConfigOptions(options: BuildOptions): Configuration {
-  const { mode, paths, isDev } = options
+  const { mode, paths, isDev } = options;
 
   return {
     mode,
     entry: paths.entry,
     output: {
       path: paths.build,
-      filename: '[name].[contenthash].js',
-      clean: true
+      filename: "[name].[contenthash].js",
+      clean: true,
     },
     plugins: buildPlugins({
-      path: paths.html
+      path: paths.html,
     }),
     module: {
-      rules: buildLoaders()
+      rules: buildLoaders(options),
     },
     resolve: buildResolvers(),
-    devtool: isDev ? 'inline-source-map' : undefined,
-    devServer: isDev ? buildDevServer(options) : undefined
-  }
+    devtool: isDev ? "inline-source-map" : undefined,
+    devServer: isDev ? buildDevServer(options) : undefined,
+  };
 }
