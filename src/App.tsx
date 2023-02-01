@@ -1,13 +1,18 @@
 import { Link, Route, Routes } from "react-router-dom";
 import { Counter } from "./components/Counter";
 import { AboutPageAsync } from "./pages/AboutPage/AboutPage.async";
-import "./index.scss";
+import "./styles/index.scss";
 import { Suspense } from "react";
 import { MainPgeAsync } from "./pages/MainPage/MainPage.async";
+import { useTheme } from "./theme/useTheme";
 
 const App = () => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
-    <div className="app">
+    <div className={`app ${theme}`}>
+      <button onClick={toggleTheme}>{theme}</button>
+
       <Link to="/" className="nav">
         MainPge
       </Link>
