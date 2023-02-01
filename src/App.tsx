@@ -5,12 +5,13 @@ import "./styles/index.scss";
 import { Suspense } from "react";
 import { MainPgeAsync } from "./pages/MainPage/MainPage.async";
 import { useTheme } from "./theme/useTheme";
+import { classNames } from "./helpers/classNames/classNames";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames("app", { selected: true }, [theme])}>
       <button onClick={toggleTheme}>{theme}</button>
 
       <Link to="/" className="nav">
@@ -19,6 +20,7 @@ const App = () => {
       <Link to="/about" className="nav">
         AboutPage
       </Link>
+
       <Suspense fallback={<div>Загрузка...</div>}>
         <Routes>
           <Route path="/" element={<MainPgeAsync />} />
