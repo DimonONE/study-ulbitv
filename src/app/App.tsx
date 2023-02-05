@@ -1,11 +1,10 @@
 import { Link, Route, Routes } from "react-router-dom";
-import { Counter } from "./components/Counter";
-import { AboutPageAsync } from "./pages/AboutPage/AboutPage.async";
-import "./styles/index.scss";
 import { Suspense } from "react";
-import { MainPgeAsync } from "./pages/MainPage/MainPage.async";
-import { useTheme } from "./theme/useTheme";
-import { classNames } from "./helpers/classNames/classNames";
+import { useTheme } from "./providers/ThemeProvider/lib/useTheme";
+import { AboutPage } from "pages/AboutPage/ui";
+import { MainPge } from "pages/MainPage";
+import "./styles/index.scss";
+import { classNames } from "shared/lib/classNames/classNames";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
@@ -23,11 +22,10 @@ const App = () => {
 
       <Suspense fallback={<div>Загрузка...</div>}>
         <Routes>
-          <Route path="/" element={<MainPgeAsync />} />
-          <Route path="/about" element={<AboutPageAsync />} />
+          <Route path="/" element={<MainPge />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
       </Suspense>
-      <Counter />
     </div>
   );
 };
