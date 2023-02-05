@@ -5,6 +5,7 @@ import { AboutPage } from "pages/AboutPage/ui";
 import { MainPge } from "pages/MainPage";
 import "./styles/index.scss";
 import { classNames } from "shared/lib/classNames/classNames";
+import { AppRouter } from "./providers/router";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
@@ -20,12 +21,7 @@ const App = () => {
         AboutPage
       </Link>
 
-      <Suspense fallback={<div>Загрузка...</div>}>
-        <Routes>
-          <Route path="/" element={<MainPge />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
-      </Suspense>
+      <AppRouter />
     </div>
   );
 };
