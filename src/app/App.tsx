@@ -3,13 +3,14 @@ import "./styles/index.scss";
 import { classNames } from "shared/lib/classNames/classNames";
 import { AppRouter } from "./providers/router";
 import { Navbar } from "widgets/Navbar";
+import { ThemeSwitcher } from "widgets/ThemeSwitcher/ui/ThemeSwitcher";
 
 const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <div className={classNames("app", { selected: true }, [theme])}>
-      <button onClick={toggleTheme}>{theme}</button>
+      <ThemeSwitcher />
       <Navbar />
       <AppRouter />
     </div>
