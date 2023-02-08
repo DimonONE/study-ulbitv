@@ -1,7 +1,14 @@
-import React from "react";
+import { useTranslation } from "react-i18next";
 
 const MainPge = () => {
-  return <div>MainPge</div>;
+  const { t } = useTranslation(["about"]);
+
+  return (
+    <div>
+      {t("Navbar.Home")}
+      <div>content text: {t("AboutText")}</div>
+    </div>
+  );
 };
 
 export default MainPge;

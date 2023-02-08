@@ -18,6 +18,7 @@ export function buildConfigOptions(options: BuildOptions): Configuration {
     },
     plugins: buildPlugins({
       path: paths.html,
+      isDev,
     }),
     module: {
       rules: buildLoaders(options),
