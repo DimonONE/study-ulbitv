@@ -1,0 +1,23 @@
+.sidebar {
+  width: 30%;
+  height: calc(100vh - var(--navbar-height));
+  max-width: 380px;
+  background: var(--secondary-color);
+
+  position: relative;
+
+  transition: width 0.4s ;
+}
+
+.collapsed {
+  width: 100px;
+  min-width: auto;
+}
+
+.swithers {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 15px;
+  justify-content: center;
+}
