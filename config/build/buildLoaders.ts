@@ -3,6 +3,18 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { BuildOptions } from "./types/config";
 
 export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
+  const babelLoader = {
+    test: /\.(js|jsx|tsx)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: ["@babel/preset-env"],
+        plugins: [["i18next-extract"]],
+      },
+    },
+  };
+
   const typescriptLoader = {
     test: /\.tsx?$/,
     use: "ts-loader",
@@ -46,6 +58,7 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
     // послєдоватєльность лоадеру має значення. Тому виносимо в окремі константи
     fileLoader,
     svgLoader,
+    babelLoader,
     typescriptLoader,
     cssLoaders,
   ];
