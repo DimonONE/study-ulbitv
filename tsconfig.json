@@ -14,7 +14,7 @@
     // дає змогу працювати з пакетами які використовують common js як з обичними import
     "esModuleInterop": true,
     // дає змогу імпорту навіть без дефолтного імпорта щоб не писати через * as
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
   },
   "ts-node": {
     "compilerOptions": {
