@@ -30,5 +30,6 @@ module.exports = {
         quotes: ['error', 'single'],
         semi: ['error', 'always'],
         'i18next/no-literal-string': ['error', { markupOnly: true }],
+        '@typescript-eslint/ban-ts-comment':  [2]
     },
 };
