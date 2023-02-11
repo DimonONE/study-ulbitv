@@ -3,5 +3,6 @@
   "Navbar": {
     "Home": "Home",
     "AboutUs": "AboutUs"
-  }
+  },
+  "Toggle": "toggle"
 }

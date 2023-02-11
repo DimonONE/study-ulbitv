@@ -6,7 +6,7 @@ const MainPge = () => {
     return (
         <div>
             {t('Navbar.Home')}
-            <div>content text: {t('AboutText')}</div>
+            <div>{t('AboutText')}</div>
         </div>
     );
 };
