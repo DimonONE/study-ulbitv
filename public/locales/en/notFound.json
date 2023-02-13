@@ -1,3 +1,5 @@
 {
-  "Not found": "Page not found"
+  "Not found": "Page not found",
+  "PageError": "PageError.....",
+  "Reload": "Reload"
 }
