@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from 'path';
+
 export default {
     // All imported modules in your tests should be mocked automatically
     // automock: false,
@@ -24,12 +26,19 @@ export default {
         'json',
         'node'
     ],
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTest.ts'],
     // The glob patterns Jest uses to detect test files
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
     ],
     rootDir: '../../',
-
+    modulePaths: [
+        '<rootDir>src'
+    ],
+    moduleNameMapper: {
+        '\\.(s?css)$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
+    },
     // Stop running tests after `n` failures
     // bail: 0,
 

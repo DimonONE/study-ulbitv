@@ -17,7 +17,6 @@ module.exports = {
         'plugin:react/jsx-runtime',
         'plugin:i18next/recommended',
     ],
-    overrides: [],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 'latest',
@@ -32,4 +31,12 @@ module.exports = {
         'i18next/no-literal-string': ['error', { markupOnly: true }],
         '@typescript-eslint/ban-ts-comment':  [2]
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off'
+            }
+        }
+    ]
 };
