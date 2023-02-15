@@ -9,7 +9,7 @@ interface PageLoaderProps {
 
 export const PageLoader: FC<PageLoaderProps> = ({ className }) => {
     return (
-        <div className={classNames(cls['page-loader'], {}, [className])}>
+        <div data-testid='page-loader' className={classNames(cls['page-loader'], {}, [className])}>
             <Loader />
         </div>
     );
