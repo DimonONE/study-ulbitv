@@ -14,7 +14,10 @@
     "fix-scss": "npx stylelint \"**/*.scss\" --fix",
     "test": "jest --config ./config/jest/jest.config.ts",
     "sb": "start-storybook -p 6006 -c ./config/storybook",
-    "build-sb": "build-storybook -c ./config/storybook"
+    "build-sb": "build-storybook -c ./config/storybook",
+    "loki-up": "yarn loki update",
+    "loki-test": "yarn loki test",
+    "loki-app": "yarn loki approve"
   },
   "keywords": [],
   "author": "",
