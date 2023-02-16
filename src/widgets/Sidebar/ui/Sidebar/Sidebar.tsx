@@ -2,7 +2,7 @@ import {type FC, useState} from 'react';
 import { useTranslation } from 'react-i18next';
 import {classNames} from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui';
-import {LangSwitcher} from 'widgets/LangSwitcher/LangSwitcher';
+import {LangSwitcher, ThemeLangSwitcher} from 'widgets/LangSwitcher/ui/LangSwitcher';
 import {ThemeSwitcher} from 'widgets/ThemeSwitcher/ui/ThemeSwitcher';
 import cls from './Sidebar.module.scss';
 
@@ -29,7 +29,7 @@ export const Sidebar: FC<SidebarProps> = ({className}) => {
 
             <div className={cls.swithers}>
                 <ThemeSwitcher />
-                <LangSwitcher className={cls.lang} />
+                <LangSwitcher className={cls.lang} theme={ThemeLangSwitcher.DEFAULT} />
             </div>
         </div>
     );

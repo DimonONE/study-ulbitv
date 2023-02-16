@@ -7,6 +7,10 @@
     background: linear-gradient(0deg, rgb(255 61 0 / 20%) 33%, #ff3d00 100%);
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
+
+    &.light::after {
+        background: #fff;
+    }
 }
 
 .loader::after {
@@ -20,6 +24,8 @@
     height: 44px;
     border-radius: 50%;
     background: #263238;
+
+    
 }
 
 @keyframes rotation {

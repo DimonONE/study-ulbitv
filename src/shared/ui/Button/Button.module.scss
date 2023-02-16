@@ -1,11 +1,25 @@
 .button {
     cursor: pointer;
+    color: var(--primary-color);
+    background: none;
 }
 
 .clear {
     padding: 0;
     margin: 0;
-    background: none;
     border: none;
     outline: none;
+}
+
+.outline {
+    padding: 10px 15px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: background 0.2s;
+
+    &:hover {
+        background: var(--primary-color);
+        color: var(--inverted-primary-color);
+    }
 }
