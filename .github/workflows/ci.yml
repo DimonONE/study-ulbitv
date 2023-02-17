@@ -1,17 +1,25 @@
-name: CI
+name: linting, testing, building 
 
-on: [push]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  build:
-
+  pipeline:
     runs-on: ubuntu-latest
-    
+    strategy:
+      matrix: 
+        node-version: [ 17.x ]
+  
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    - name: Starting Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: install modules
+      run: npm install
+    - name: build production project
+      run: npm run build:prod
