@@ -32,6 +32,6 @@ jobs:
     - name: unite testing
       run: yarn test:unite
     - name: start storybook
-      run: yarn storybook
-    - name: unite testing UI
-      run: yarn test:ui
+      run: yarn storybook:build
+    - name: testing UI
+      run: yarn test:ui:ci
