@@ -13,11 +13,12 @@
     "fix:ts": "npx eslint \"**/*.{ts,tsx}\" --fix",
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "fix:scss": "npx stylelint \"**/*.scss\" --fix",
-    "test": "jest --config ./config/jest/jest.config.ts",
-    "sb": "start-storybook -p 6006 -c ./config/storybook",
-    "loki:up": "yarn loki update",
-    "loki:test": "yarn loki test",
-    "loki:app": "yarn loki approve"
+    "test:unite": "jest --config ./config/jest/jest.config.ts",
+    "storybook": "start-storybook -p 6006 -c ./config/storybook",
+    "storybook:build": "build-storybook -p 6006 -c ./config/storybook",
+    "test:ui": "yarn loki test",
+    "test:ui:up": "yarn loki update",
+    "test:ui:ok": "yarn loki approve"
   },
   "keywords": [],
   "author": "",

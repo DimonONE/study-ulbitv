@@ -25,3 +25,15 @@ jobs:
       run: yarn install
     - name: build production project
       run: yarn build:prod
+    - name: linting typescript
+      run: yarn lint:ts
+    - name: linting css
+      run: yarn lint:scss
+    - name: unite testing
+      run: yarn test:unite
+    - name: unite testing
+      run: yarn test:unite
+    - name: start storybook
+      run: yarn storybook
+    - name: unite testing UI
+      run: yarn test:ui
