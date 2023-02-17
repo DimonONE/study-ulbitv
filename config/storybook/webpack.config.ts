@@ -17,20 +17,24 @@ export default ({config}: {config: webpack.Configuration}) => {
     config.resolve?.extensions?.push('.ts', '.tsx');
     config.module?.rules?.push(cssLoader);
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    //@ts-ignore
-    config.module.rules = config.module?.rules?.map((rule: RuleSetRule) => {
-        if(/svg/.test(rule.test as string)) {
-            return {...rule, exclude: /\.svg/i}; 
-        }
+    if(config?.module?.rules) {
+        config.module.rules = config.module?.rules?.map((rule: RuleSetRule | '...') => {
+            const ruleTestSvg = rule !== '...' 
+                && rule.test instanceof RegExp 
+                && rule.test.toString().includes('svg');
 
-        return rule;
-    });
-
-    config.module?.rules?.push({
-        test: /\.svg$/,
-        use: ['@svgr/webpack'],
-    });
+            if(ruleTestSvg) {
+                return {...rule, exclude: /\.svg$/i}; 
+            }
+    
+            return rule;
+        });
+    
+        config.module.rules.push({
+            test: /\.svg$/,
+            use: ['@svgr/webpack'],
+        });
+    }
 
     return config;
 };
