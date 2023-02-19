@@ -1,44 +1,45 @@
 .sidebar {
-    width: 30%;
-    height: calc(100vh - var(--navbar-height));
-    max-width: 380px;
-    background: var(--secondary-color);
-    position: relative;
-    transition: width 0.4s;
+  position: relative;
+  width: 30%;
+  height: calc(100vh - var(--navbar-height));
+  max-width: 380px;
+  background: var(--secondary-color);
+  transition: width 0.4s;
 }
 
 .collapsed {
-    width: 100px;
-    min-width: auto;
+  width: 100px;
+  min-width: auto;
 }
 
 .swithers {
-    display: flex;
-    width: 100%;
-    position: absolute;
-    bottom: 15px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-    padding-bottom: 0;
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  padding-bottom: 0;
+  width: 100%;
 
-    .switch {
-        margin-bottom: 10px;
-    }
+  .switch {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
 }
 
 .toggle {
-    position: absolute;
-    right: 0;
-    opacity: 0.5;
-    transform: translate(100%, 70vh);
-    transition: .7s transform ;
+  position: absolute;
+  right: 0;
+  opacity: 0.5;
+  transform: translate(100%, 70vh);
+  transition: .7s transform ;
 
-    &:hover {
-        opacity: 1;
-    }
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .collapsed .toggle {
-    transform: translate(0, 70vh);
+  transform: translate(0, 70vh);
 }
