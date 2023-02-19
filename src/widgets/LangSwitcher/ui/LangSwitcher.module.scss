@@ -1,60 +1,59 @@
 .inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: inset -3px 3px 6px rgb(0 0 0 / 30%);
-    background: var(--bg-color); 
-    color: var(--primary-color);
-    text-decoration: none;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: all .3s ease-in-out;    
-    font: var(--font-m);
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset -3px 3px 6px rgb(0 0 0 / 30%);    
+  font: var(--font-m);
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase; 
+  color: var(--primary-color);
+  background: var(--bg-color);
+  transition: all .3s ease-in-out;
 }
 
 .circle,
 .inner {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    box-sizing: content-box;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-sizing: content-box;
 }
 
 .circle {
-    background-color: #fff;
-    padding: 5px;
-    position: relative;
-    box-shadow: inset -2px 2px 20px rgb(0 0 0 / 20%), -2px 2px 30px rgb(0 0 0 / 30%);
-    display: inline-block;
-    margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 5px;
+  box-shadow: inset -2px 2px 20px rgb(0 0 0 / 20%), -2px 2px 30px rgb(0 0 0 / 30%);
+  background-color: #fff;
 }
 
 .circle::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    box-shadow: inset -2px 2px 2px #fff;
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 50%;
+  box-shadow: inset -2px 2px 2px #fff;
 }
 
 
-.lang-switcher {
-    &.light .inner {
-        background: var(--bg-inverted-color); 
-        color: var(--bg-color);
-    }
+.langSwitcher {
+  &:hover .inner {  
+    color: var(--inverted-secondary-color);
+    background: var(--bg-inverted-color);
+  }
+  &.light .inner { 
+    color: var(--bg-color);
+    background: var(--bg-inverted-color);
+  }
 
-    &.dark .inner {
-        background: var(--bg-color); 
-        color: var(--primary-color);
-    }
-
-    &:hover .inner {
-        background: var(--bg-inverted-color);  
-        color: var(--inverted-secondary-color);
-    }
+  &.dark .inner { 
+    color: var(--primary-color);
+    background: var(--bg-color);
+  }
 }

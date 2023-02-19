@@ -1,7 +1,7 @@
-.page-loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: calc(100vh - var(--navbar-height));
+.pageLoader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - var(--navbar-height));
 }

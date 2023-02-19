@@ -17,10 +17,28 @@
     width: 100%;
     position: absolute;
     bottom: 15px;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
+    padding: 20px;
+    padding-bottom: 0;
+
+    .switch {
+        margin-bottom: 10px;
+    }
 }
 
-.lang {
-    margin: 20px;
+.toggle {
+    position: absolute;
+    right: 0;
+    opacity: 0.5;
+    transform: translate(100%, 70vh);
+    transition: .7s transform ;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.collapsed .toggle {
+    transform: translate(0, 70vh);
 }

@@ -26,11 +26,11 @@ export const LangSwitcher: FC<LangSwitcherProps> = (props) => {
 
     return (
         <Button
-            className={classNames(cls['lang-switcher'], {}, [className, cls[theme]])}
+            className={classNames(cls.langSwitcher, {}, [className, cls[theme]])}
             onClick={onToggle}
         >
-            <div className={cls['circle']}>
-                <div className={cls['inner']}>
+            <div className={cls.circle}>
+                <div className={cls.inner}>
                     {i18n.language}
                 </div>
             </div>

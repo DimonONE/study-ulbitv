@@ -10,7 +10,7 @@ className?: string
 const NotFound: FC<NotFoundProps> = ({className}) => {
     const {t} = useTranslation('notFound');
     return (
-        <div className={classNames(cls['not-found'], {}, [className])}>
+        <div className={classNames(cls.notFound, {}, [className])}>
             {t('Not found')}
         </div>
     );

@@ -1,21 +1,21 @@
 .navbar {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: var(--navbar-height);
-    background: var(--inverted-bg-color);
-    padding: 15px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+  height: var(--navbar-height);
+  background: var(--inverted-bg-color);
 }
 
 .links {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
-.navbar-item {
-    margin: 0 15px;
-    transition: margin 0.5s;
+.navbarItem {
+  margin: 0 15px;
+  transition: margin 0.5s;
     
-    &:hover {
-        margin: 0 20px;
-    }
+  &:hover {
+    margin: 0 20px;
+  }
 }

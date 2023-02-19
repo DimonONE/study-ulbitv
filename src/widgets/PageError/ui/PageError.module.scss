@@ -1,19 +1,19 @@
-.page-error {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    background: #0b1116;
-    color: #fff;
-    font: var(--font-l);
+.pageError {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font: var(--font-l);
+  color: #fff;
+  background: #0b1116;
 }
 
 .reload {
-    background: var(--inverted-bg-color);
-    color: var(--error-color);
-    font: var(--font-m);
-    border: 1px solid #ffffff3f;
-    padding: 5px 15px;
-    margin-top: 20px;
+  margin-top: 20px;
+  border: 1px solid #ffffff3f;
+  padding: 5px 15px;
+  font: var(--font-m);
+  color: var(--error-color);
+  background: var(--inverted-bg-color);
 }

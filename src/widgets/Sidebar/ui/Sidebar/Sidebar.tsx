@@ -2,6 +2,7 @@ import {type FC, useState} from 'react';
 import { useTranslation } from 'react-i18next';
 import {classNames} from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui';
+import { ButtonTheme } from 'shared/ui/Button/Button';
 import {LangSwitcher, ThemeLangSwitcher} from 'widgets/LangSwitcher/ui/LangSwitcher';
 import {ThemeSwitcher} from 'widgets/ThemeSwitcher/ui/ThemeSwitcher';
 import cls from './Sidebar.module.scss';
@@ -11,7 +12,7 @@ type SidebarProps = {
 };
 
 export const Sidebar: FC<SidebarProps> = ({className}) => {
-    const [collapsed, setCollapsed] = useState(false);
+    const [collapsed, setCollapsed] = useState(true);
     const {t} = useTranslation();
 
     const onToggle = () => {
@@ -25,11 +26,17 @@ export const Sidebar: FC<SidebarProps> = ({className}) => {
                 className,
             ])}
         >
-            <Button data-testid='sidebar-toggle' onClick={onToggle}>{t('Toggle')}</Button>
+            <Button data-testid='sidebar-toggle'
+                theme={ButtonTheme.BACKGROUND}
+                className={classNames(cls.toggle)}
+                square
+                onClick={onToggle}>
+                {collapsed ? '>' : '<'}
+            </Button>
 
             <div className={cls.swithers}>
-                <ThemeSwitcher />
-                <LangSwitcher className={cls.lang} theme={ThemeLangSwitcher.DEFAULT} />
+                <ThemeSwitcher className={cls.switch} />
+                <LangSwitcher className={cls.switch} theme={ThemeLangSwitcher.DEFAULT} />
             </div>
         </div>
     );
