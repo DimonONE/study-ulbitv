@@ -1,5 +1,6 @@
 {
   "AboutText": "",
+  "Lang": "",
   "Navbar": {
     "AboutUs": "",
     "Home": ""
@@ -7,6 +8,7 @@
   "Not found": "",
   "PageError": "",
   "Reload": "",
+  "ShortLang": "",
   "Toggle": "",
   "Translate": ""
 }

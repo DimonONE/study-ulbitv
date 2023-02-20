@@ -1,8 +1,7 @@
 .sidebar {
   position: relative;
-  width: 30%;
+  width: 300px;
   height: calc(100vh - var(--navbar-height));
-  max-width: 380px;
   background: var(--secondary-color);
   transition: width 0.4s;
 }
@@ -31,8 +30,9 @@
 .toggle {
   position: absolute;
   right: 0;
+  z-index: 2;
   opacity: 0.5;
-  transform: translate(100%, 70vh);
+  transform: translate(100%, 50vh);
   transition: .7s transform ;
 
   &:hover {
@@ -40,6 +40,54 @@
   }
 }
 
-.collapsed .toggle {
-  transform: translate(0, 70vh);
+
+.links {
+  padding: 0 10px;
+
+  .item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+
+    &:hover {
+      .link {
+        color: var(--inverted-bg-color);
+      }
+    
+      .icon {
+        fill: var(--inverted-bg-color);
+      }
+    }
+  }
+
+  .icon {
+    fill: var(--inverted-primary-color);
+  }
+    
+  .link {
+    margin-left: 5px;
+    color: var(--inverted-primary-color);
+    opacity: 1;
+    transition: .3s opacity;
+  }
 }
+
+.collapsed {
+  .switch {
+    margin-right: 0;
+  }
+  
+  .toggle {
+    transform: translate(0, 50vh);
+  }
+
+  .item {
+    justify-content: center;
+  }
+
+  .link {
+    position: absolute;
+    opacity: 0;
+  }
+}
+  

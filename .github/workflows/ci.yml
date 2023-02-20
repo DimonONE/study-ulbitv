@@ -27,11 +27,16 @@ jobs:
       run: yarn build:prod
     - name: linting typescript
       run: yarn lint:ts
+      if: always()
     - name: linting css
       run: yarn lint:scss
+      if: always()
     - name: unite testing
       run: yarn test:unite
+      if: always()
     - name: start storybook
       run: yarn storybook:build
+      if: always()
     - name: testing UI
       run: yarn test:ui:ci
+      if: always()
