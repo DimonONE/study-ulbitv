@@ -33,5 +33,12 @@ module.exports = {
         rules: {
             'i18next/no-literal-string': 'off'
         }
-    }]
+    },
+    {
+        files: ['**/scripts/**/*'],
+        rules: {
+            '@typescript-eslint/no-var-requires': 'off'
+        }
+    },
+    ]
 };
