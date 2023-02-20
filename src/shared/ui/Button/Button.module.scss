@@ -28,8 +28,7 @@
 
 .background {
   color: var(--primary-color);
-  background: red;
-  // background: var(--bg-color);
+  background: var(--inverted-bg-color);
 }
 
 .backgroundInverted {
