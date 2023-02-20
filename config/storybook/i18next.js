@@ -17,7 +17,6 @@ const resources = ns.reduce((acc, n) => {
     return acc;
 }, {});
 
-console.log('resources', resources);
 i18n
     .use(Backend)
     .use(LanguageDetector)
