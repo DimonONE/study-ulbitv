@@ -9,6 +9,6 @@ describe('PageLoader', () => {
     });
     test('to have class page-loader', () => { 
         renderWithTranslation(<PageLoader />);
-        expect(screen.getByTestId('page-loader')).toHaveClass('page-loader');
+        expect(screen.getByTestId('page-loader')).toHaveClass('pageLoader');
     });
 });
