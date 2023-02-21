@@ -1,5 +1,8 @@
 {
+  " Зв'язок": "",
   "AboutText": "",
+  "Communication": "",
+  "Email": "",
   "Lang": "",
   "Navbar": {
     "AboutUs": "",
@@ -7,8 +10,12 @@
   },
   "Not found": "",
   "PageError": "",
+  "Phone": "",
   "Reload": "",
+  "Send Feedback": "",
   "ShortLang": "",
+  "Telegram": "",
   "Toggle": "",
-  "Translate": ""
+  "Translate": "",
+  "Зв'язок": ""
 }

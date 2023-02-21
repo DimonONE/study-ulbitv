@@ -1,0 +1,12 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  padding: 5px 10px;
+
+  &:hover {
+    color: red;
+  }
+}
