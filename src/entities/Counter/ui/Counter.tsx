@@ -2,6 +2,9 @@ import { Button } from 'shared/ui';
 import {useDispatch, useSelector} from 'react-redux';
 import { counterActions } from '../model/slice/counterSlice';
 import { StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
+import { ButtonTheme } from 'shared/ui/Button/Button';
+import { classNames } from 'shared/lib/classNames/classNames';
+import cls from './Counter.module.scss';
 
 interface CounterProps {
   className?: string
@@ -20,10 +23,10 @@ export const Counter = (props: CounterProps) => {
     
     };
     return (
-        <div>
-            <Button data-testid='count-decrement' onClick={decrement}>decrement</Button>
-            <h2 data-testid='count-value'>{counterValue}</h2>
-            <Button data-testid='count-increment' onClick={increment}>increment</Button>
+        <div className={classNames(cls.counter)}>
+            <Button theme={ButtonTheme.BACKGROUND} data-testid='count-decrement' onClick={decrement}>-</Button>
+            <h2 className={cls.value} data-testid='count-value'>{counterValue}</h2>
+            <Button theme={ButtonTheme.BACKGROUND} data-testid='count-increment' onClick={increment}>+</Button>
         </div>
     );
 };
