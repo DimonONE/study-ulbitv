@@ -21,10 +21,9 @@ export const Counter = (props: CounterProps) => {
     };
     return (
         <div>
-            <Button  onClick={decrement}>decrement</Button>
-            <h2>value = {counterValue}</h2>
-
-            <Button onClick={increment}>increment</Button>
+            <Button data-testid='count-decrement' onClick={decrement}>decrement</Button>
+            <h2 data-testid='count-value'>{counterValue}</h2>
+            <Button data-testid='count-increment' onClick={increment}>increment</Button>
         </div>
     );
 };
